@@ -1,0 +1,23 @@
+{
+  "name": "roberto-portfolio",
+  "version": "1.0.0",
+  "description": "Modern web developer portfolio for Roberto Emilio González Guzmán",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch scss:css",
+    "serve": "live-server",
+    "dev": "start npm run sass && start npm run serve",
+    "build": "sass scss:css --style=compressed"
+  },
+  "keywords": [
+    "portfolio",
+    "web",
+    "developer"
+  ],
+  "author": "Roberto Emilio González Guzmán",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "sass": "^1.71.1"
+  }
+}

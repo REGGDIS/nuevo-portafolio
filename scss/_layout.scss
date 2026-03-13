@@ -1,0 +1,135 @@
+// Navbar
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    @include glassmorphism;
+    padding: 1rem 0;
+    transition: padding $transition-normal;
+    
+    &.scrolled {
+        padding: 0.5rem 0;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    }
+    
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .logo {
+        font-family: $font-heading;
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: $text-primary;
+        
+        span {
+            color: $primary-color;
+        }
+    }
+    
+    .nav-links {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        
+        @include respond-to('tablet') {
+            display: none; // Will handle mobile menu in JS
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            flex-direction: column;
+            @include glassmorphism;
+            padding: 2rem;
+            
+            &.active {
+                display: flex;
+            }
+        }
+        
+        .nav-link {
+            color: $text-primary;
+            font-weight: 500;
+            position: relative;
+            
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background: linear-gradient(90deg, $primary-color, $secondary-color);
+                transition: width $transition-fast;
+            }
+            
+            &:hover::after {
+                width: 100%;
+            }
+        }
+    }
+    
+    .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+        
+        @include respond-to('tablet') {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        
+        span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: $text-primary;
+            border-radius: 3px;
+            transition: transform 0.3s, opacity 0.3s;
+        }
+        
+        &.active {
+            span:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+            span:nth-child(2) {
+                opacity: 0;
+            }
+            span:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+        }
+    }
+}
+
+// Footer
+.footer {
+    padding: 3rem 0;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    margin-top: 4rem;
+    
+    .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+        
+        a {
+            color: $text-secondary;
+            font-size: 1.5rem;
+            transition: transform $transition-fast, color $transition-fast;
+            
+            &:hover {
+                color: $primary-color;
+                transform: translateY(-3px);
+            }
+        }
+    }
+}

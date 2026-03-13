@@ -1,0 +1,28 @@
+@mixin glassmorphism {
+    background: $surface-color;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@mixin glowing-text($color) {
+    text-shadow: 0 0 10px rgba($color, 0.5), 0 0 20px rgba($color, 0.3);
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin respond-to($breakpoint) {
+    @if $breakpoint == 'mobile' {
+        @media (max-width: $bp-mobile) { @content; }
+    } @else if $breakpoint == 'tablet' {
+        @media (max-width: $bp-tablet) { @content; }
+    } @else if $breakpoint == 'desktop' {
+        @media (max-width: $bp-desktop) { @content; }
+    } @else if $breakpoint == 'large' {
+        @media (max-width: $bp-large) { @content; }
+    }
+}

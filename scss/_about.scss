@@ -1,0 +1,117 @@
+// About Section
+.about {
+    position: relative;
+    
+    .section-header {
+        margin-bottom: 4rem;
+        
+        h2 {
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+        
+        @include respond-to('desktop') {
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+    }
+
+    .about-text {
+        h3 {
+            color: $text-primary;
+            margin-bottom: 1.5rem;
+        }
+        
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    .stats-container {
+        display: flex;
+        gap: 2rem;
+        margin-top: 2rem;
+        
+        .stat-box {
+            @include glassmorphism;
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            flex: 1;
+            transition: transform $transition-fast;
+            
+            &:hover {
+                transform: translateY(-5px);
+                border-color: rgba($primary-color, 0.4);
+            }
+            
+            h4 {
+                font-size: 2.5rem;
+                margin-bottom: 0.5rem;
+                font-family: $font-heading;
+            }
+            
+            span {
+                color: $text-secondary;
+                font-size: 0.9rem;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .skills-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        
+        .skill-category {
+            @include glassmorphism;
+            padding: 2.5rem;
+            border-radius: 16px;
+            transition: transform $transition-normal;
+            
+            &:hover {
+                transform: translateX(10px);
+                border-color: rgba($secondary-color, 0.3);
+            }
+            
+            h4 {
+                margin-bottom: 1.5rem;
+                color: $text-primary;
+                display: flex;
+                align-items: center;
+                gap: 0.8rem;
+                font-size: 1.3rem;
+                
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background: linear-gradient(135deg, $primary-color, $secondary-color);
+                }
+            }
+            
+            .skill-tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+        }
+    }
+}
+
+// Global scope helper
+.text-center {
+    text-align: center;
+}

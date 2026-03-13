@@ -1,0 +1,25 @@
+// Colors
+$bg-color: #0B1120;
+$surface-color: rgba(30, 41, 59, 0.6); // For backdrop filter
+$surface-color-solid: #1E293B;
+$text-primary: #F8FAFC;
+$text-secondary: #94A3B8;
+
+// Accents
+$primary-color: #3B82F6;
+$secondary-color: #8B5CF6;
+$success-color: #10B981;
+
+// Typography
+$font-heading: 'Outfit', sans-serif;
+$font-body: 'Inter', sans-serif;
+
+// Transitions
+$transition-fast: 0.2s ease;
+$transition-normal: 0.3s ease;
+
+// Breakpoints
+$bp-mobile: 576px;
+$bp-tablet: 768px;
+$bp-desktop: 992px;
+$bp-large: 1200px;

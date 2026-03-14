@@ -17,7 +17,7 @@
         border-radius: 50%;
         z-index: 0;
     }
-    
+
     &::after {
         content: '';
         position: absolute;
@@ -37,9 +37,9 @@
         grid-template-columns: 1fr 1fr;
         gap: 4rem;
         align-items: center;
-        
+
         @include respond-to('desktop') {
-            grid-template-columns: 1fr;
+            grid-template-columns: minmax(0, 1fr);
             text-align: center;
             gap: 2rem;
             padding-top: 6rem;
@@ -59,7 +59,7 @@
 
         h1 {
             margin-bottom: 1.5rem;
-            
+
             span {
                 display: block;
             }
@@ -70,6 +70,7 @@
             color: $text-secondary;
             margin-bottom: 2.5rem;
             max-width: 600px;
+
             @include respond-to('desktop') {
                 margin-left: auto;
                 margin-right: auto;
@@ -79,10 +80,11 @@
         .cta-group {
             display: flex;
             gap: 1rem;
-            
+
             @include respond-to('desktop') {
                 justify-content: center;
             }
+
             @include respond-to('mobile') {
                 flex-direction: column;
             }
@@ -92,34 +94,48 @@
     .hero-visual {
         position: relative;
         perspective: 1000px;
-        
+        width: 100%;
+        max-width: 100%;
+
         .code-window {
             @include glassmorphism;
             border-radius: 12px;
             padding: 1.5rem;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
             transform: rotateY(-15deg) rotateX(5deg);
             transition: transform $transition-normal;
-            
+            width: 100%;
+            max-width: 100%;
+            overflow: hidden;
+
             &:hover {
                 transform: rotateY(0) rotateX(0);
             }
-            
+
             .header {
                 display: flex;
                 gap: 8px;
                 margin-bottom: 1.5rem;
-                
+
                 .dot {
                     width: 12px;
                     height: 12px;
                     border-radius: 50%;
-                    &.red { background: #FF5F56; }
-                    &.yellow { background: #FFBD2E; }
-                    &.green { background: #27C93F; }
+
+                    &.red {
+                        background: #FF5F56;
+                    }
+
+                    &.yellow {
+                        background: #FFBD2E;
+                    }
+
+                    &.green {
+                        background: #27C93F;
+                    }
                 }
             }
-            
+
             pre {
                 font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
                 color: $text-secondary;
@@ -127,11 +143,27 @@
                 line-height: 1.6;
                 text-align: left;
                 overflow-x: auto;
-                
-                .keyword { color: #8B5CF6; font-weight: 500;} /* $secondary-color */
-                .string { color: #10B981; } /* $success-color */
-                .function { color: #3B82F6; } /* $primary-color */
-                .comment { color: #64748b; font-style: italic; }
+
+                .keyword {
+                    color: #8B5CF6;
+                    font-weight: 500;
+                }
+
+                /* $secondary-color */
+                .string {
+                    color: #10B981;
+                }
+
+                /* $success-color */
+                .function {
+                    color: #3B82F6;
+                }
+
+                /* $primary-color */
+                .comment {
+                    color: #64748b;
+                    font-style: italic;
+                }
             }
         }
     }

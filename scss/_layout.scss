@@ -6,11 +6,11 @@
     width: 100%;
     z-index: 1000;
     @include glassmorphism;
-    padding: 1rem 0;
+    padding: 1.2rem 0;
     transition: padding $transition-normal;
     
     &.scrolled {
-        padding: 0.5rem 0;
+        padding: 0.8rem 0;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     }
     
@@ -18,6 +18,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        width: 100%;
     }
     
     .logo {
@@ -78,11 +79,15 @@
         background: none;
         border: none;
         cursor: pointer;
+        padding: 0.5rem;
+        margin-right: 0.5rem; /* Push left against edge */
+        margin-top: 4px;
+        z-index: 1001;
         
         @include respond-to('tablet') {
             display: flex;
             flex-direction: column;
-            gap: 5px;
+            gap: 6px;
         }
         
         span {

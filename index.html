@@ -26,13 +26,17 @@
         <header class="navbar" id="navbar">
             <div class="container nav-container">
                 <a href="#hero" class="logo">Reg<span>devs</span></a>
-                <nav class="nav-links">
-                    <a href="#about" class="nav-link">Sobre Mí</a>
-                    <a href="#skills" class="nav-link">Skills</a>
+                <nav class="nav-links" id="primary-navigation" aria-label="Navegación principal">
+                    <a href="#hero" class="nav-link">Inicio</a>
+                    <a href="#services" class="nav-link">Servicios</a>
                     <a href="#projects" class="nav-link">Proyectos</a>
-                    <a href="#contact" class="btn btn-primary btn-sm">Contacto</a>
+                    <a href="#process" class="nav-link">Proceso</a>
+                    <a href="#about" class="nav-link">Sobre mí</a>
+                    <a href="#technologies" class="nav-link">Tecnologías</a>
+                    <a href="#contact" class="nav-link">Contacto</a>
+                    <a href="#contact" class="btn btn-primary btn-sm header-cta">Hablemos de tu proyecto</a>
                 </nav>
-                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <button class="mobile-menu-btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="primary-navigation">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -45,17 +49,17 @@
             <section id="hero" class="hero">
                 <div class="container">
                     <div class="hero-content">
-                        <span class="greeting">Hola, mi nombre es</span>
+                        <span class="greeting">Portafolio profesional</span>
                         <h1>
-                            Roberto Emilio<br>
-                            <span class="text-gradient">González Guzmán</span>
+                            Desarrollo, diseño y soluciones digitales
+                            <span class="text-gradient">a medida</span>
                         </h1>
                         <p class="description">
-                            Desarrollador Web y de Software especializado en crear experiencias digitales excepcionales, combinando diseño moderno con código limpio y escalable.
+                            Creo aplicaciones, sitios web y recursos visuales que transforman necesidades concretas en soluciones funcionales, claras y profesionales.
                         </p>
                         <div class="cta-group">
-                            <a href="#projects" class="btn btn-primary">Ver Proyectos</a>
-                            <a href="#contact" class="btn btn-outline">Contáctame</a>
+                            <a href="#projects" class="btn btn-primary">Ver proyectos</a>
+                            <a href="#contact" class="btn btn-outline">Conversemos</a>
                         </div>
                     </div>
                     
@@ -67,71 +71,68 @@
                                 <div class="dot green"></div>
                             </div>
                             <pre><code><span class="keyword">const</span> <span class="function">developer</span> = {
-  <span class="string">name</span>: <span class="string">'Roberto E. Gonzalez'</span>,
-  <span class="string">role</span>: <span class="string">'Desarrollador Web & Software'</span>,
-  <span class="string">skills</span>: [<span class="string">'HTML'</span>, <span class="string">'SCSS'</span>, <span class="string">'JavaScript'</span>],
-  <span class="string">passion</span>: <span class="string">'Building modern interfaces'</span>,
+  <span class="string">role</span>: <span class="string">'Software + Web + Design'</span>,
+  <span class="string">focus</span>: [<span class="string">'Apps'</span>, <span class="string">'Websites'</span>, <span class="string">'Brand assets'</span>],
+  <span class="string">approach</span>: <span class="string">'Clear, useful solutions'</span>,
   
-  <span class="function">buildExperience</span>() {
-    <span class="keyword">return</span> <span class="keyword">this</span>.skills.map(s => <span class="string">`Awesome ${s}`</span>);
+  <span class="function">buildSolution</span>(need) {
+    <span class="keyword">return</span> <span class="string">`Useful result for ${need}`</span>;
   }
 };
 
-<span class="comment">// Let's build something great together.</span>
-<span class="function">developer</span>.buildExperience();</code></pre>
+<span class="comment">// Let's create something useful.</span>
+<span class="function">developer</span>.buildSolution(<span class="string">'your project'</span>);</code></pre>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- About / Skills Section -->
-            <section id="about" class="about section">
+            <!-- Services Section -->
+            <section id="services" class="services section">
                 <div class="container">
-                    <div class="section-header text-center">
-                        <h2>Sobre Mí & <span class="text-gradient">Habilidades</span></h2>
-                        <p>Las tecnologías y enfoques que uso para dar vida a las ideas.</p>
+                    <div class="section-header text-center gs_reveal">
+                        <h2>Servicios <span class="text-gradient">profesionales</span></h2>
+                        <p>Soluciones digitales enfocadas en funcionalidad, diseño y claridad.</p>
                     </div>
 
-                    <div class="about-grid">
-                        <div class="about-text gs_reveal">
-                            <h3>Un poco de mi historia</h3>
-                            <p>Soy un desarrollador web y de software, dedicado a escribir código limpio y estructurado. Me encanta enfrentar problemas complejos y transformarlos en soluciones digitales elegantes, intuitivas y eficientes.</p>
-                            <p>Siempre estoy aprendiendo nuevas tecnologías y refinando mis habilidades en diseño UI/UX, arquitectura frontend y desarrollo de sistemas robustos para entregar productos escalables.</p>
-                            
-                            <div class="stats-container">
-                                <div class="stat-box">
-                                    <h4 class="text-gradient">100%</h4>
-                                    <span>Compromiso</span>
-                                </div>
-                                <div class="stat-box">
-                                    <h4 class="text-gradient">&lt;/&gt;</h4>
-                                    <span>Código Limpio</span>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="services-grid">
+                        <article class="service-card gs_reveal">
+                            <span class="service-number">01</span>
+                            <h3>Desarrollo de software</h3>
+                            <p>Aplicaciones y sistemas a medida para organizar procesos, datos y flujos de trabajo.</p>
+                        </article>
+                        <article class="service-card gs_reveal">
+                            <span class="service-number">02</span>
+                            <h3>Desarrollo web</h3>
+                            <p>Sitios web modernos, responsivos y orientados a comunicar valor de forma profesional.</p>
+                        </article>
+                        <article class="service-card gs_reveal">
+                            <span class="service-number">03</span>
+                            <h3>Diseño gráfico</h3>
+                            <p>Recursos visuales, piezas digitales e identidad aplicada para reforzar la presencia de marca.</p>
+                        </article>
+                        <article class="service-card gs_reveal">
+                            <span class="service-number">04</span>
+                            <h3>Soluciones informáticas</h3>
+                            <p>Apoyo técnico, automatización y mejora de herramientas para resolver necesidades concretas.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
 
-                        <div class="skills-wrapper gs_reveal gs_reveal_fromRight">
-                            <div class="skill-category">
-                                <h4>Frontend & Estilos</h4>
-                                <div class="skill-tags">
-                                    <span class="badge">React & TypeScript</span>
-                                    <span class="badge">HTML / CSS / JS</span>
-                                    <span class="badge">SASS / SCSS</span>
-                                    <span class="badge">GSAP</span>
-                                </div>
-                            </div>
-                            
-                            <div class="skill-category">
-                                <h4>Software & Backend</h4>
-                                <div class="skill-tags">
-                                    <span class="badge">Java (JavaFX, Spring Boot, JPA)</span>
-                                    <span class="badge">Python & Django</span>
-                                    <span class="badge">Node.js</span>
-                                    <span class="badge">MySQL, PostgreSQL, SQLite</span>
-                                    <span class="badge">Git & GitHub</span>
-                                </div>
-                            </div>
-                        </div>
+            <!-- Value Proposition Section -->
+            <section id="value" class="value-proposition section">
+                <div class="container value-grid">
+                    <div class="value-copy gs_reveal gs_reveal_fromLeft">
+                        <span class="section-kicker">Propuesta de valor</span>
+                        <h2>Tecnología y diseño en una misma solución</h2>
+                        <p>Mi formación en diseño gráfico e Ingeniería Informática me permite abordar cada proyecto tanto desde su funcionamiento técnico como desde su presentación visual y experiencia de uso.</p>
+                    </div>
+                    <div class="value-list gs_reveal gs_reveal_fromRight" aria-label="Aspectos destacados de trabajo">
+                        <div class="value-item">Análisis de necesidades</div>
+                        <div class="value-item">Diseño funcional y visual</div>
+                        <div class="value-item">Desarrollo mantenible</div>
+                        <div class="value-item">Pruebas y acompañamiento</div>
                     </div>
                 </div>
             </section>
@@ -141,7 +142,7 @@
                 <div class="container">
                     <div class="section-header text-center gs_reveal">
                         <h2>Mis <span class="text-gradient">Proyectos</span></h2>
-                        <p>Trabajos destacados de desarrollo frontend y de software.</p>
+                        <p>Proyectos de desarrollo web, software, diseño y soluciones digitales.</p>
                     </div>
 
                     <div class="projects-grid">
@@ -150,7 +151,7 @@
                             <div class="project-header">
                                 <h3>Sistema de Autenticación en Java</h3>
                                 <div class="project-links">
-                                    <a href="https://github.com/REGGDIS/auth-system-java" target="_blank" class="github-link" aria-label="Ver en GitHub">
+                                    <a href="https://github.com/REGGDIS/auth-system-java" target="_blank" rel="noopener noreferrer" class="github-link" aria-label="Ver Sistema de Autenticación en GitHub">
                                         <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                                     </a>
                                 </div>
@@ -183,7 +184,7 @@
                             <div class="project-header">
                                 <h3>Sistema de Gestión Logística</h3>
                                 <div class="project-links">
-                                    <a href="https://github.com/REGGDIS/logistica-app" target="_blank" class="github-link" aria-label="Ver en GitHub">
+                                    <a href="https://github.com/REGGDIS/logistica-app" target="_blank" rel="noopener noreferrer" class="github-link" aria-label="Ver Sistema de Gestión Logística en GitHub">
                                         <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                                     </a>
                                 </div>
@@ -215,7 +216,7 @@
                             <div class="project-header">
                                 <h3>Battleship Game</h3>
                                 <div class="project-links">
-                                    <a href="https://github.com/REGGDIS/battleship-game" target="_blank" class="github-link" aria-label="Ver en GitHub">
+                                    <a href="https://github.com/REGGDIS/battleship-game" target="_blank" rel="noopener noreferrer" class="github-link" aria-label="Ver Battleship Game en GitHub">
                                         <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                                     </a>
                                 </div>
@@ -247,7 +248,7 @@
                             <div class="project-header">
                                 <h3>Reserva Hotel App</h3>
                                 <div class="project-links">
-                                    <a href="https://github.com/REGGDIS/reserva-hotel" target="_blank" class="github-link" aria-label="Ver en GitHub">
+                                    <a href="https://github.com/REGGDIS/reserva-hotel" target="_blank" rel="noopener noreferrer" class="github-link" aria-label="Ver Reserva Hotel App en GitHub">
                                         <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                                     </a>
                                 </div>
@@ -280,7 +281,7 @@
                             <div class="project-header">
                                 <h3>ACA Logos Website</h3>
                                 <div class="project-links">
-                                    <a href="https://github.com/REGGDIS/acalogos-site" target="_blank" class="github-link" aria-label="Ver en GitHub">
+                                    <a href="https://github.com/REGGDIS/acalogos-site" target="_blank" rel="noopener noreferrer" class="github-link" aria-label="Ver ACA Logos Website en GitHub">
                                         <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                                     </a>
                                 </div>
@@ -313,7 +314,7 @@
                             <div class="project-header">
                                 <h3>Reveloper App</h3>
                                 <div class="project-links">
-                                    <a href="https://github.com/REGGDIS/reveloper" target="_blank" class="github-link" aria-label="Ver en GitHub">
+                                    <a href="https://github.com/REGGDIS/reveloper" target="_blank" rel="noopener noreferrer" class="github-link" aria-label="Ver Reveloper App en GitHub">
                                         <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                                     </a>
                                 </div>
@@ -345,7 +346,7 @@
                             <div class="project-header">
                                 <h3>Etiquetador de Imágenes</h3>
                                 <div class="project-links">
-                                    <a href="https://github.com/REGGDIS/etiquetador-imagenes" target="_blank" class="github-link" aria-label="Ver en GitHub">
+                                    <a href="https://github.com/REGGDIS/etiquetador-imagenes" target="_blank" rel="noopener noreferrer" class="github-link" aria-label="Ver Etiquetador de Imágenes en GitHub">
                                         <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                                     </a>
                                 </div>
@@ -378,7 +379,7 @@
                             <div class="project-header">
                                 <h3>Notas JavaFX + SQLite</h3>
                                 <div class="project-links">
-                                    <a href="https://github.com/REGGDIS/notesfx" target="_blank" class="github-link" aria-label="Ver en GitHub">
+                                    <a href="https://github.com/REGGDIS/notesfx" target="_blank" rel="noopener noreferrer" class="github-link" aria-label="Ver NotesFX en GitHub">
                                         <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                                     </a>
                                 </div>
@@ -409,14 +410,107 @@
                 </div>
             </section>
 
+            <!-- Process Section -->
+            <section id="process" class="process section">
+                <div class="container">
+                    <div class="section-header text-center gs_reveal">
+                        <h2>Proceso de <span class="text-gradient">trabajo</span></h2>
+                        <p>Un flujo claro para avanzar desde la necesidad inicial hasta una solución lista para usar.</p>
+                    </div>
+
+                    <div class="process-steps">
+                        <article class="process-step gs_reveal">
+                            <span>01</span>
+                            <h3>Descubrimiento</h3>
+                            <p>Reviso objetivos, contexto, usuarios y restricciones para definir el alcance real.</p>
+                        </article>
+                        <article class="process-step gs_reveal">
+                            <span>02</span>
+                            <h3>Diseño y planificación</h3>
+                            <p>Ordeno la solución, propongo estructura visual y priorizo funcionalidades.</p>
+                        </article>
+                        <article class="process-step gs_reveal">
+                            <span>03</span>
+                            <h3>Desarrollo</h3>
+                            <p>Construyo con código mantenible, revisando comportamiento y experiencia de uso.</p>
+                        </article>
+                        <article class="process-step gs_reveal">
+                            <span>04</span>
+                            <h3>Pruebas y entrega</h3>
+                            <p>Valido el resultado, ajusto detalles y acompaño la puesta en marcha.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="about section">
+                <div class="container">
+                    <div class="section-header text-center">
+                        <h2>Sobre <span class="text-gradient">mí</span></h2>
+                        <p>Una mirada breve a mi enfoque profesional y forma de trabajo.</p>
+                    </div>
+
+                    <div class="about-grid about-grid-single">
+                        <div class="about-text gs_reveal">
+                            <h3>Diseño, código y soluciones con propósito</h3>
+                            <p>Soy Roberto Emilio González Guzmán, diseñador gráfico y estudiante de Ingeniería Informática. Desarrollo aplicaciones, sitios web y soluciones digitales combinando programación, análisis y comunicación visual. Mi objetivo es transformar necesidades concretas en productos funcionales, claros y adaptados a cada proyecto.</p>
+                            <p>Trabajo con tecnologías web, software de escritorio, bases de datos, prototipos e interfaces, procurando que cada solución tenga una estructura técnica mantenible y una presentación visual coherente.</p>
+
+                            <div class="stats-container">
+                                <div class="stat-box">
+                                    <h4 class="text-gradient">Diseño + desarrollo</h4>
+                                </div>
+                                <div class="stat-box">
+                                    <h4 class="text-gradient">Soluciones a medida</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technologies Section -->
+            <section id="technologies" class="technologies section">
+                <div class="container">
+                    <div class="section-header text-center gs_reveal">
+                        <h2>Tecnologías y <span class="text-gradient">herramientas</span></h2>
+                        <p>Stack y recursos que utilizo para construir soluciones digitales mantenibles.</p>
+                    </div>
+
+                    <div class="technologies-grid">
+                        <div class="tech-category gs_reveal gs_reveal_fromLeft">
+                            <h3>Frontend & Estilos</h3>
+                            <div class="skill-tags">
+                                <span class="badge">React & TypeScript</span>
+                                <span class="badge">HTML / CSS / JS</span>
+                                <span class="badge">SASS / SCSS</span>
+                                <span class="badge">GSAP</span>
+                            </div>
+                        </div>
+                        <div class="tech-category gs_reveal gs_reveal_fromRight">
+                            <h3>Software & Backend</h3>
+                            <div class="skill-tags">
+                                <span class="badge">Java (JavaFX, Spring Boot, JPA)</span>
+                                <span class="badge">Python & Django</span>
+                                <span class="badge">Node.js</span>
+                                <span class="badge">MySQL, PostgreSQL, SQLite</span>
+                                <span class="badge">Git & GitHub</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!-- Contact Section -->
             <section id="contact" class="contact section">
                 <div class="container">
                     <div class="contact-card gs_reveal gs_reveal_fromBottom">
                         <div class="contact-content">
                             <h2>¿Tienes un proyecto en mente?</h2>
-                            <p>Estoy disponible para sumarme a nuevos proyectos y aportar valor a profesional. Conversemos sobre cómo puedo ayudarte.</p>
-                            <a href="mailto:regdis@gmail.com" class="btn btn-primary">Envíame un correo</a>
+                            <p>Estoy disponible para sumarme a nuevos proyectos y aportar valor profesional. Conversemos sobre cómo puedo ayudarte.</p>
+                            <a href="mailto:regdis@gmail.com" class="btn btn-primary">Conversemos sobre tu proyecto</a>
                         </div>
                     </div>
                 </div>
@@ -427,8 +521,8 @@
         <footer class="footer">
             <div class="container">
                 <div class="social-links">
-                    <a href="https://github.com/REGGDIS" target="_blank" aria-label="GitHub"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
-                    <a href="https://www.linkedin.com/in/roberto-emilio-gonz%C3%A1lez-guzm%C3%A1n-39ab9420a/" aria-label="LinkedIn" target="_blank"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+                    <a href="https://github.com/REGGDIS" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+                    <a href="https://www.linkedin.com/in/roberto-emilio-gonz%C3%A1lez-guzm%C3%A1n-39ab9420a/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
                 </div>
                 <p>&copy; 2026 Roberto Emilio González Guzmán. Todos los derechos reservados.</p>
             </div>

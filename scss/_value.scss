@@ -1,0 +1,43 @@
+.value-proposition {
+    position: relative;
+
+    .value-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+        gap: 3rem;
+        align-items: center;
+
+        @include respond-to('desktop') {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .section-kicker {
+        display: inline-block;
+        color: $primary-color;
+        font-family: $font-heading;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+    }
+
+    .value-copy p {
+        font-size: 1.15rem;
+        max-width: 760px;
+    }
+
+    .value-list {
+        display: grid;
+        gap: 1rem;
+    }
+
+    .value-item {
+        @include glassmorphism;
+        border-radius: 14px;
+        color: $text-primary;
+        font-weight: 600;
+        padding: 1.1rem 1.25rem;
+        border-color: rgba($secondary-color, 0.22);
+    }
+}

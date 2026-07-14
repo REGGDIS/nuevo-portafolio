@@ -1,0 +1,36 @@
+.technologies {
+    .section-header {
+        margin-bottom: 4rem;
+    }
+
+    .technologies-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2rem;
+
+        @include respond-to('desktop') {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .tech-category {
+        @include glassmorphism;
+        border-radius: 18px;
+        padding: 2.5rem;
+        min-width: 0;
+
+        @include respond-to('mobile') {
+            padding: 1.5rem;
+        }
+
+        h3 {
+            font-size: 1.35rem;
+        }
+    }
+
+    .skill-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+}

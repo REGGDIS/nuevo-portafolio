@@ -14,7 +14,12 @@ body {
     color: $text-primary;
     font-family: $font-body;
     line-height: 1.6;
-    overflow-x: hidden;
+}
+
+:focus-visible {
+    outline: 3px solid rgba($primary-color, 0.85);
+    outline-offset: 4px;
+    border-radius: 8px;
 }
 
 h1,
@@ -79,11 +84,16 @@ img {
 }
 
 .section {
-    padding: 6rem 0;
+    padding: 5rem 0;
+    scroll-margin-top: calc(var(--navbar-height, 88px) + 1rem);
 
     @include respond-to('tablet') {
         padding: 4rem 0;
     }
+}
+
+#hero {
+    scroll-margin-top: var(--navbar-height, 88px);
 }
 
 .text-gradient {
@@ -91,4 +101,15 @@ img {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
 }

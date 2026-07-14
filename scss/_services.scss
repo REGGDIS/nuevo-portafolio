@@ -1,0 +1,49 @@
+.services {
+    .section-header {
+        margin-bottom: 4rem;
+    }
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1.5rem;
+
+        @include respond-to('desktop') {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        @include respond-to('mobile') {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .service-card {
+        @include glassmorphism;
+        border-radius: 18px;
+        padding: 2rem;
+        min-width: 0;
+        transition: transform $transition-normal, border-color $transition-normal;
+
+        &:hover {
+            transform: translateY(-6px);
+            border-color: rgba($primary-color, 0.35);
+        }
+
+        .service-number {
+            display: inline-block;
+            color: $primary-color;
+            font-family: $font-heading;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            margin-bottom: 1.5rem;
+        }
+
+        h3 {
+            font-size: 1.35rem;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+}

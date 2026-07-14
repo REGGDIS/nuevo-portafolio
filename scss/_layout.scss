@@ -34,7 +34,7 @@
     
     .nav-links {
         display: flex;
-        gap: 2rem;
+        gap: 1.2rem;
         align-items: center;
         
         @include respond-to('tablet') {
@@ -44,6 +44,7 @@
             left: 0;
             width: 100%;
             flex-direction: column;
+            align-items: stretch;
             @include glassmorphism;
             padding: 2rem;
             
@@ -56,6 +57,11 @@
             color: $text-primary;
             font-weight: 500;
             position: relative;
+
+            @include respond-to('tablet') {
+                width: 100%;
+                text-align: center;
+            }
             
             &::after {
                 content: '';
@@ -69,6 +75,14 @@
             }
             
             &:hover::after {
+                width: 100%;
+            }
+        }
+
+        .header-cta {
+            white-space: nowrap;
+
+            @include respond-to('tablet') {
                 width: 100%;
             }
         }
